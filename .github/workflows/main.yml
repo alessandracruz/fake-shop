@@ -1,9 +1,11 @@
-name: CI-CD
+name: CI
 
 on:
   push:
-    branches: ["main"]
-  workflow_dispatch: 
+    branches:
+      - main
+  workflow_dispatch:
+
 jobs:
   ci:
     runs-on: ubuntu-latest
@@ -11,11 +13,16 @@ jobs:
       - name: Obter o código do Projeto
         uses: actions/checkout@v4
 
-      - name: Autenticar no Dokcer Hub
+      - name: Autenticar no Docker Hub
         uses: docker/login-action@v3
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }} 
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Verificar Diretório e Arquivos
+        run: |
+          ls -la ./src
+          cat ./src/Dockerfile
 
       - name: Construção da Imagem Docker
         uses: docker/build-push-action@v6
@@ -26,6 +33,7 @@ jobs:
           tags: |
             alessaccruz/fake-shop:latest
             alessaccruz/fake-shop:v${{ github.run_number }}
+
 
   cd:
     runs-on: ubuntu-latest
