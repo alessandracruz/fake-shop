@@ -21,8 +21,12 @@ jobs:
 
       - name: Verificar Diretório e Arquivos
         run: |
+          echo "Listando diretório src e verificando Dockerfile"
           ls -la ./src
-          cat ./src/Dockerfile
+          if [ ! -f ./src/Dockerfile ]; then
+            echo "Erro: Dockerfile não encontrado em ./src"
+            exit 1
+          fi
 
       - name: Configurar Builder
         run: docker buildx create --use
@@ -36,7 +40,6 @@ jobs:
           tags: |
             alessaccruz/fake-shop:latest
             alessaccruz/fake-shop:v${{ github.run_number }}
-
 
   cd:
     runs-on: ubuntu-latest
