@@ -24,6 +24,9 @@ jobs:
           ls -la ./src
           cat ./src/Dockerfile
 
+      - name: Configurar Builder
+        run: docker buildx create --use
+
       - name: Construção da Imagem Docker
         uses: docker/build-push-action@v6
         with:
