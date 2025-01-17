@@ -22,7 +22,7 @@ jobs:
         with:
           context: ./src
           push: true
-          file: src/Dockerfile
+          file: ./src/Dockerfile
           tags: |
             alessaccruz/fake-shop:latest
             alessaccruz/fake-shop:v${{ github.run_number }}
