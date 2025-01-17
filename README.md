@@ -30,11 +30,18 @@ Fechando mais um passo dessa solução DevOps, o objetivo desta etapa foi:
 
 Durante esta etapa, foi necessário criar uma conta na AWS com um cartão internacional, e os recursos utilizados **não estão no pacote gratuito**. Para evitar cobranças inesperadas, **apague os recursos criados ao final do projeto**, incluindo o cluster EKS e quaisquer serviços associados.
 
-Passos recomendados:
+Para apagar o que foi feito no Kubernetes:
 
-1. Exclua o cluster EKS criado.
-2. Confirme que nenhum serviço (como ELBs) ainda esteja ativo no painel da AWS.
-3. Certifique-se de que a conta não tenha recursos ativos que possam gerar cobranças.
+```
+kubectl delete -f k8s/deployment.yaml
+```
+
+Passos recomendados no ambiente web AWS:
+
+1. Exclua o Node groups no ambiente EKS
+2. Exclua o cluster EKS criado.
+3. Exclua a stack de rede no ambiente CloudFormation.
+4. Certifique-se de que a conta não tenha recursos ativos que possam gerar cobranças.
 
 ------
 
