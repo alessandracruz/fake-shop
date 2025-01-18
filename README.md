@@ -124,6 +124,37 @@ Nesta etapa, foram consolidados conhecimentos essenciais para o profissional Dev
 
   Essa abordagem prática demonstra como a **pipeline CI/CD** eleva o nível de entrega de software, garantindo qualidade, segurança e eficiência em cada etapa do ciclo de desenvolvimento.
 
-## 📌 **Próximo Passo**
+------
 
-- Implementar monitoramento da aplicação com **Prometheus** e **Grafana**.
+### 📊 **Monitoramento com Prometheus e Grafana**
+
+   - Configuração de um ambiente robusto de **monitoramento de aplicação** e **infraestrutura** utilizando **Prometheus** e **Grafana**.
+   - Coleta de métricas da aplicação **Fake Shop** através de endpoints expostos.
+   - Monitoramento detalhado do cluster Kubernetes, identificando possíveis pontos críticos e prevenindo problemas.
+   - Criação de dashboards informativos para uma visão ampla do desempenho da aplicação e da infraestrutura.
+
+   ------
+
+   #### **Benefícios e Objetivos**
+
+      - **Otimização:** Dashboards fornecem insights sobre o desempenho da aplicação e do ambiente, permitindo ajustes em tempo real.
+      - **Confiabilidade:** Configuração de alertas para antecipar problemas e melhorar a experiência do cliente e do usuário.
+      - **Escalabilidade:** Monitoramento centralizado garante que o sistema suporte crescimento sem perda de qualidade.
+
+   ------
+
+   #### **Exemplos Práticos**
+
+   Os dashboards foram criados para:
+
+      - Visualizar o tempo de resposta e o número de requisições da aplicação.
+      - Monitorar a alocação de recursos dos pods no Kubernetes.
+      - Configurar alertas, como consumo excessivo de CPU ou memória, e falhas nos serviços.
+
+------
+
+## 📌 **Próximos Passos** Possíveis
+
+- Expandir o uso de alertas para diferentes cenários (ex.: disponibilidade, segurança).
+- Integrar monitoramento com ferramentas de logs para uma análise mais detalhada de erros.
+- Explorar integrações com serviços externos, como notificações para alertas automáticos.
