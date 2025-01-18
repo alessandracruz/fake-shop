@@ -75,7 +75,55 @@ Nesta etapa, foram consolidados conhecimentos essenciais para o profissional Dev
 
 ------
 
-## 📌 **Próximos Passos**
+### 🚀 **Pipeline CI/CD com GitHub Actions**
 
-- Expandir o projeto com CI/CD utilizando **GitHub Actions**.
+- Nesta etapa, configuramos uma **pipeline CI/CD** para o projeto **Fake Shop**, utilizando **GitHub Actions** como plataforma de automação. Essa pipeline representa um passo essencial na modernização do fluxo DevOps, unindo **integração contínua (CI)** e **entrega contínua (CD)** de maneira eficiente e confiável.
+
+  #### **O que é o GitHub Marketplace?**
+
+  O **GitHub Marketplace** é uma biblioteca de actions reutilizáveis, desenvolvidas por mantenedores confiáveis e pela comunidade, que permitem integrar funcionalidades avançadas à pipeline. Durante esta etapa, utilizamos actions prontas disponíveis no marketplace para:
+
+  - **Autenticação no Docker Hub e AWS**.
+  - **Construção e push de imagens Docker**.
+  - **Deploy de manifestos no Kubernetes**.
+
+  ------
+
+  ### **O que foi Implementado?**
+
+  #### **Integração Contínua (CI)**
+
+  1. Checkout do Código:
+     - Obtemos o código mais recente do repositório para iniciar o processo.
+  2. Autenticação no Docker Hub:
+     - Garante o acesso seguro ao Docker Hub para construção e publicação de imagens.
+  3. Verificação do Ambiente:
+     - Confirma a existência de arquivos críticos, como o `Dockerfile`, para evitar falhas na construção.
+  4. Construção e Push da Imagem Docker:
+     - Cria a imagem a partir do diretório `src` e a publica no Docker Hub com tags versionadas automaticamente.
+
+  #### **Entrega Contínua (CD)**
+
+  1. Autenticação na AWS:
+     - Configuramos as credenciais para acessar o EKS (Elastic Kubernetes Service).
+  2. Configuração do Kubernetes:
+     - Atualizamos o contexto do `kubectl` para gerenciar o cluster na AWS.
+  3. Deploy Automatizado:
+     - Utilizamos ações para aplicar os manifestos Kubernetes, garantindo que a aplicação seja atualizada com a imagem mais recente.
+
+  ------
+
+  ### **Por que Isso é Importante?**
+
+  - **Automação**: Elimina processos manuais, reduzindo erros e economizando tempo.
+  - **Escalabilidade**: Facilita o deploy de versões mais recentes em ambientes complexos.
+  - **Confiabilidade**: Testes e validações garantem a integridade da aplicação antes do deploy.
+  - **Flexibilidade**: A pipeline pode ser estendida para incluir testes automatizados (unitários, integração e funcionais), análise de código e até mesmo monitoramento em tempo real.
+
+  ------
+
+  Essa abordagem prática demonstra como a **pipeline CI/CD** eleva o nível de entrega de software, garantindo qualidade, segurança e eficiência em cada etapa do ciclo de desenvolvimento.
+
+## 📌 **Próximo Passo**
+
 - Implementar monitoramento da aplicação com **Prometheus** e **Grafana**.
