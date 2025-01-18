@@ -137,9 +137,9 @@ Nesta etapa, foram consolidados conhecimentos essenciais para o profissional Dev
 
    #### **Benefícios e Objetivos**
 
-      - **Otimização:** Dashboards fornecem insights sobre o desempenho da aplicação e do ambiente, permitindo ajustes em tempo real.
-      - **Confiabilidade:** Configuração de alertas para antecipar problemas e melhorar a experiência do cliente e do usuário.
-      - **Escalabilidade:** Monitoramento centralizado garante que o sistema suporte crescimento sem perda de qualidade.
+   - **Otimização:** Dashboards fornecem insights sobre o desempenho da aplicação e do ambiente, permitindo ajustes em tempo real.
+   - **Confiabilidade:** Configuração de alertas para antecipar problemas e melhorar a experiência do cliente e do usuário.
+   - **Escalabilidade:** Monitoramento centralizado garante que o sistema suporte crescimento sem perda de qualidade.
 
    ------
 
@@ -147,9 +147,9 @@ Nesta etapa, foram consolidados conhecimentos essenciais para o profissional Dev
 
    Os dashboards foram criados para:
 
-      - Visualizar o tempo de resposta e o número de requisições da aplicação.
-      - Monitorar a alocação de recursos dos pods no Kubernetes.
-      - Configurar alertas, como consumo excessivo de CPU ou memória, e falhas nos serviços.
+   - Visualizar o tempo de resposta e o número de requisições da aplicação.
+   - Monitorar a alocação de recursos dos pods no Kubernetes.
+   - Configurar alertas, como consumo excessivo de CPU ou memória, e falhas nos serviços.
 
 ------
 
